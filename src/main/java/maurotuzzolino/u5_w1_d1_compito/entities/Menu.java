@@ -9,10 +9,14 @@ public class Menu {
         this.voci = voci;
     }
 
+    public List<VoceMenu> getVoci() {
+        return voci;
+    }
+
     public void stampaMenu() {
         System.out.println("=== MENÙ PIZZERIA ===");
         for (VoceMenu voce : voci) {
-            System.out.printf("- %s: %.2f€ (%d cal)\n", voce.getNome(), voce.getPrezzo(), voce.getCalorie());
+            System.out.printf("- %s: %.2f€ (%d cal)%n", voce.getNome(), voce.getPrezzo(), voce.getCalorie());
         }
     }
 }
